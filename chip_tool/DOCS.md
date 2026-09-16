@@ -1,6 +1,7 @@
 # Home Assistant App: CHIP Tool
 
 The CHIP Tool app provides the Matter chip-tool controller directly in Home Assistant.
+
 It is intended for Matter development, testing, debugging, and advanced troubleshooting. The app gives you access to the chip-tool command line through Home Assistant, without having to build and install the Matter CHIP Tool separately.
 
 Note: This app is currently experimental and is intended primarily for advanced users.
@@ -30,12 +31,16 @@ The CHIP Tool itself is part of the Matter SDK. The Home Assistant app provides 
 
 ## Using CHIP Tool
 
-After starting the app, open CHIP Tool from the Home Assistant sidebar. The app provides a terminal where you can run chip-tool commands.
+After starting the app, open CHIP Tool from the Home Assistant sidebar.
+
+The app provides a terminal where you can run chip-tool commands.
+
 To display the available commands, run:
 
 ```
 chip-tool
 ```
+
 chip-tool displays the available command groups and options. You can use these commands to discover the functionality supported by the installed version of the Matter SDK.
 
 For example, to see the commands available for the `onoff` cluster:
@@ -53,6 +58,7 @@ chip-tool onoff on
 ### Commissioning a Matter device
 
 Before you can control a Matter device with chip-tool, the device must be commissioned.
+
 For example, if you have a Matter QR code or manual pairing code, you can use:
 
 ```
@@ -77,17 +83,21 @@ For detailed commissioning instructions, see the Matter [Working with the CHIP T
 ### Controlling a Matter device
 
 Once a device has been commissioned, you can use chip-tool to interact with the Matter clusters implemented by the device.
+
 For example, a device implementing the On/Off cluster can be controlled with:
+
 ```
 chip-tool onoff on <node_id> <endpoint_id>
 ```
 
 To turn it off:
+
 ```
 chip-tool onoff off <node_id> <endpoint_id>
 ```
 
 To read the current On/Off state:
+
 ```
 chip-tool onoff read on-off <node_id> <endpoint_id>
 ```
@@ -99,26 +109,31 @@ The exact commands available depend on the device type and the Matter clusters i
 chip-tool contains a large number of Matter commands. You can use the command line itself to discover what is available.
 
 List all top-level commands:
+
 ```
 chip-tool
 ```
 
 List the commands available for a cluster:
+
 ```
 chip-tool <cluster>
 ```
 
 For example:
+
 ```
 chip-tool onoff
 ```
 
 List the options for a command:
+
 ```
 chip-tool onoff on
 ```
 
 This is often the easiest way to determine the parameters required by a command. You can also run the command without all its arguments to display the expected parameters.
+
 For the complete list of supported commands, options, interactive mode, subscriptions, and advanced features, see the Matter [Working with the CHIP Tool][chip_tool_guide] documentation.
 
 ## Matter applications and tools
@@ -134,53 +149,48 @@ The important distinction is:
 
 | Application | Purpose |
 | --- | --- |
-| chip-tool | Matter controller for commissioning and controlling devices |
-| chip-cert | Matter certificate and certification tool |
+| `chip-tool` | Matter controller for commissioning and controlling devices |
+| `chip-cert` | Matter certificate and certification tool |
 
 ### Device examples
 
 | Application | Device type |
 | --- | --- |
-| air-purifier | Air purifier |
-| air-quality-sensor | Air quality sensor |
-| all-devices | Multiple device types in a single application |
-| closure | Gate, garage door, or other closure |
-| contact-sensor | Contact sensor |
-| dishwasher | Dishwasher |
-| evse | Electric vehicle supply equipment |
-| light | Light |
-| lock | Door lock |
-| microwave-oven | Microwave oven |
-| refrigerator | Refrigerator |
-| rvc | Robotic vacuum cleaner |
-| thermostat | Thermostat |
-| tv-app | TV application |
-| tv-casting-app | TV Casting application |
-| water-heater | Water heater |
-| water-leak-detector | Water leak detector |
+| `chip-air-purifier-app` | Air purifier |
+| `contact-sensor-app` | Contact sensor |
+| `chip-dishwasher-app` | Dishwasher |
+| `chip-lighting-app` | Light |
+| `chip-lock-app` | Door lock |
+| `chip-microwave-oven-app` | Microwave oven |
+| `chip-refrigerator-app` | Refrigerator |
+| `chip-rvc-app` | Robotic vacuum cleaner |
+| `chip-tv-app` | TV application |
+| `chip-tv-casting-app` | TV Casting application |
+| `matter-water-heater-app` | Water heater |
+| `water-leak-detector-app` | Water leak detector |
 
 ### Energy and network examples
 
 | Application | Purpose |
 | --- | --- |
-| energy-gateway | Electrical energy pricing and grid conditions |
-| energy-management | Energy management |
-| network-manager | Thread network manager |
+| `chip-energy-gateway-app` | Electrical energy pricing and grid conditions |
+| `chip-evse-app` | Electric vehicle supply equipment |
+| `matter-network-manager-app` | Thread network manager |
 
 ### OTA examples
 
 | Application | Purpose |
 | --- | --- |
-| ota-provider | Provides over-the-air firmware updates |
-| ota-requestor | Requests over-the-air firmware updates |
+| `chip-ota-provider-app` | Provides over-the-air firmware updates |
+| `chip-ota-requestor-app` | Requests over-the-air firmware updates |
 
 ### Commissioning example
 
 | Application | Purpose |
 | --- | --- |
-| terms-and-conditions | Demonstrates terms and conditions during commissioning |
+| `chip-terms-and-conditions-app` | Demonstrates terms and conditions during commissioning |
 
-You do not need to install these other examples to use the CHIP Tool app. The Home Assistant app provides the chip-tool controller. The other applications are separate Matter examples used for development and testing.
+These example applications are bundled directly in the CHIP Tool app's container alongside `chip-tool`. You can run any of them to have a local Matter device to commission and control with `chip-tool`, without needing separate hardware.
 
 ## Configuration
 
@@ -191,6 +201,7 @@ This app currently has no configuration options.
 ### A command fails
 
 Start by checking the command syntax:
+
 ```
 chip-tool <command>
 ```
@@ -213,7 +224,7 @@ The commissioning process depends on the device's network and the commissioning 
 - IP;
 - a commissioning proxy.
 
-See the [Working with the CHIP Tool](https://project-chip.github.io/connectedhomeip-doc/development_controllers/chip-tool/chip_tool_guide.html) documentation for the complete procedure.
+See the [Working with the CHIP Tool][chip_tool_guide] documentation for the complete procedure.
 
 ### I need advanced CHIP Tool features
 
