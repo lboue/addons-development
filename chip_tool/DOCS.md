@@ -17,7 +17,7 @@ chip-tool is a Matter controller. It can be used to:
 - subscribe to Matter attributes and events;
 - test and troubleshoot Matter devices.
 
-The CHIP Tool itself is part of the Matter SDK. The Home Assistant app provides a convenient way to run it from your Home Assistant system. For a complete reference, see the Matter project's [Working with the CHIP Tool][chip_tool_guide] documentation.
+The CHIP Tool itself is part of the Matter SDK. The Home Assistant app provides a convenient way to run it from your Home Assistant system. For a complete reference, see the Matter project's [Working with the CHIP Tool](https://project-chip.github.io/connectedhomeip-doc/development_controllers/chip-tool/chip_tool_guide.html) documentation.
 
 ## Installation
 
@@ -78,7 +78,7 @@ Where:
 
 Other commissioning methods are available for different network configurations, including Wi-Fi, Thread, and commissioning through a proxy.
 
-For detailed commissioning instructions, see the Matter [Working with the CHIP Tool][chip_tool_guide] documentation.
+For detailed commissioning instructions, see the Matter [Working with the CHIP Tool](https://project-chip.github.io/connectedhomeip-doc/development_controllers/chip-tool/chip_tool_guide.html) documentation.
 
 ### Controlling a Matter device
 
@@ -134,7 +134,7 @@ chip-tool onoff on
 
 This is often the easiest way to determine the parameters required by a command. You can also run the command without all its arguments to display the expected parameters.
 
-For the complete list of supported commands, options, interactive mode, subscriptions, and advanced features, see the Matter [Working with the CHIP Tool][chip_tool_guide] documentation.
+For the complete list of supported commands, options, interactive mode, subscriptions, and advanced features, see the Matter [Working with the CHIP Tool](https://project-chip.github.io/connectedhomeip-doc/development_controllers/chip-tool/chip_tool_guide.html) documentation.
 
 ## Matter applications and tools
 
@@ -224,7 +224,7 @@ The commissioning process depends on the device's network and the commissioning 
 - IP;
 - a commissioning proxy.
 
-See the [Working with the CHIP Tool][chip_tool_guide] documentation for the complete procedure.
+See the [Working with the CHIP Tool](https://project-chip.github.io/connectedhomeip-doc/development_controllers/chip-tool/chip_tool_guide.html) documentation for the complete procedure.
 
 ### I need advanced CHIP Tool features
 
@@ -248,11 +248,11 @@ For questions about the Home Assistant app, you can get help from the Home Assis
 
 If you have found a bug in the app, please [open an issue][issue] in the `apps-development` repository.
 
-For questions about chip-tool itself or Matter protocol behavior, refer to the Matter project's [CHIP Tool documentation][chip_tool_guide].
+For questions about chip-tool itself or Matter protocol behavior, refer to the Matter project's [CHIP Tool documentation](https://project-chip.github.io/connectedhomeip-doc/development_controllers/chip-tool/chip_tool_guide.html).
 
 [app]: https://my.home-assistant.io/redirect/supervisor_addon/?addon=a99ed31d_chip_tool&repository_url=https%3A%2F%2Fgithub.com%2Fhome-assistant%2Fapps-development
 [discord]: https://discord.gg/c5DvZ4e
 [forum]: https://community.home-assistant.io
 [reddit]: https://reddit.com/r/homeassistant
 [issue]: https://github.com/home-assistant/apps-development/issues
-[chip_tool_guide]: https://github.com/project-chip/connectedhomeip/blob/master/docs/development_controllers/chip-tool/chip_tool_guide.md
+(https://project-chip.github.io/connectedhomeip-doc/development_controllers/chip-tool/chip_tool_guide.html): https://github.com/project-chip/connectedhomeip/blob/master/docs/development_controllers/chip-tool/chip_tool_guide.md
