@@ -255,4 +255,4 @@ For questions about chip-tool itself or Matter protocol behavior, refer to the M
 [forum]: https://community.home-assistant.io
 [reddit]: https://reddit.com/r/homeassistant
 [issue]: https://github.com/home-assistant/apps-development/issues
-(https://project-chip.github.io/connectedhomeip-doc/development_controllers/chip-tool/chip_tool_guide.html): https://github.com/project-chip/connectedhomeip/blob/master/docs/development_controllers/chip-tool/chip_tool_guide.md
+[chip_tool_guide]: https://github.com/project-chip/connectedhomeip/blob/master/docs/development_controllers/chip-tool/chip_tool_guide.md
